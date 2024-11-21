@@ -1,0 +1,31 @@
+
+
+{% extends "template.html" %}
+{% load static %}
+{% block title %} LIST & LIVE - Login {% endblock %}
+
+
+{% block content %}
+
+<section class="bg-gray-100 font-sans antialiased">
+    <div class="flex justify-center items-center min-h-screen bg-gray-100">
+        <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+            <h1 class="text-3xl font-bold text-center text-indigo-600 mb-4">Email Confirmation</h1>
+            <p class="text-lg text-gray-700 mb-4">Thank you for signing up! Please confirm your email address by clicking the link below.</p>
+            
+            <div class="bg-indigo-600 text-white rounded-lg py-3 text-center">
+                <a href="{{ confirm_url }}" class="font-semibold hover:bg-indigo-700 transition-all">Confirm Your Email</a>
+            </div>
+
+            <p class="text-sm text-gray-600 mt-6 text-center">
+                If you did not sign up for this account, you can safely ignore this email.
+            </p>
+
+            <div class="mt-6 text-center">
+                <a href="{{ logout_url }}" class="text-sm text-indigo-600 hover:text-indigo-800">Log out</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

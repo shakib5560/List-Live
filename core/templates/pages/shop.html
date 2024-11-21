@@ -1,0 +1,341 @@
+{% extends "template.html" %}
+{% load static %}
+{% block title %} LIST & LIVE - Shop {% endblock %}
+
+
+{% block content %}
+
+<!-- header sections -->
+
+<div style="background-image: url('https://i.ibb.co.com/pRNyD8p/Black-and-Blue-Modern-Gradient-Zoom-Virtual-Background.png'); background-size: cover;" class="w-full shadow-3xl bg-blue-900 flex justify-center items-center h-[250px]">
+  <div class="flex flex-col justify-center items-center ">
+    <h1 class="mt-[100px] text-5xl font-bold text-white tracking-widest" >SHOP</h1>
+    <p class="text-white uppercase">Hello This is Shop Page, You can Buy Our Products</p>
+  </div>
+</div>
+
+<!-- banner sections -->
+
+<section class="bg-gray-100 mb-20 pb-[170px] py-12">
+    <div class="text-center mb-8">
+      <p class="text-blue-600 mt-20 font-medium">List & Live</p>
+      <h2 class="text-5xl text-gray-900 mb-14 font-bold">Product Category</h2>
+    </div>
+    <div class="container mx-auto space-y-4">
+      <!-- Responsive Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        <!-- Card 1 -->
+        <div
+          class="card h-[270px] flex flex-col justify-center items-center relative text-white overflow-hidden group"
+        >
+          <div
+            class="absolute inset-0 z-0 transition-transform duration-500 ease-in-out transform group-hover:scale-110 group-hover:brightness-105"
+            style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), 
+            url('https://i.ibb.co/S6qMX9m/1.jpg'); background-size: cover; background-position: center;"
+          ></div>
+          <div class="z-10 flex flex-col items-center">
+            <p class="text-3xl font-bold">$1.7M - $2.2M</p>
+            <p class="font-medium mt-2">Classic House</p>
+          </div>
+        </div>
+  
+        <!-- Card 2 -->
+        <div
+          class="card h-[270px] flex flex-col justify-center items-center relative text-white overflow-hidden group"
+        >
+          <div
+            class="absolute inset-0 z-0 transition-transform duration-500 ease-in-out transform group-hover:scale-110 group-hover:brightness-105"
+            style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), 
+            url('https://i.ibb.co/s9YCmwg/4.jpg'); background-size: cover; background-position: center;"
+          ></div>
+          <div class="z-10 flex flex-col items-center">
+            <p class="text-3xl font-bold">$0.6M - $1.5M</p>
+            <p class="font-medium mt-2">Readymade Apartment</p>
+          </div>
+        </div>
+  
+        <!-- Card 3 -->
+        <div
+          class="card h-[270px] flex flex-col justify-center items-center relative text-white overflow-hidden group"
+        >
+          <div
+            class="absolute inset-0 z-0 transition-transform duration-500 ease-in-out transform group-hover:scale-110 group-hover:brightness-105"
+            style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), 
+            url('https://i.ibb.co/n31q3xt/6.jpg'); background-size: cover; background-position: center;"
+          ></div>
+          <div class="z-10 flex flex-col items-center">
+            <p class="text-3xl font-bold">$10M - $20M</p>
+            <p class="font-medium mt-2">Premium House</p>
+          </div>
+        </div>
+  
+        <!-- Card 4 -->
+        <div
+          class="card h-[270px] flex flex-col justify-center items-center relative text-white overflow-hidden group"
+        >
+          <div
+            class="absolute inset-0 z-0 transition-transform duration-500 ease-in-out transform group-hover:scale-110 group-hover:brightness-105"
+            style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), 
+            url('https://images.pexels.com/photos/449461/pexels-photo-449461.jpeg?auto=compress&cs=tinysrgb&w=600'); background-size: cover; background-position: center;"
+          ></div>
+          <div class="z-10 flex flex-col items-center">
+            <p class="text-3xl font-bold">$5M - $7M</p>
+            <p class="font-medium mt-2">Luxury Villa</p>
+          </div>
+        </div>
+  
+        <!-- Card 5 -->
+        <div
+          class="card h-[270px] flex flex-col justify-center items-center relative text-white overflow-hidden group"
+        >
+          <div
+            class="absolute inset-0 z-0 transition-transform duration-500 ease-in-out transform group-hover:scale-110 group-hover:brightness-105"
+            style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), 
+            url('https://images.pexels.com/photos/950058/pexels-photo-950058.jpeg?auto=compress&cs=tinysrgb&w=600'); background-size: cover; background-position: center;"
+          ></div>
+          <div class="z-10 flex flex-col items-center">
+            <p class="text-3xl font-bold">$1M - $1.5M</p>
+            <p class="font-medium mt-2">Urban Apartment</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- products sections -->
+
+  <section class="container mx-auto px-4">
+
+    <div class="text-center mb-10">
+      <p class="text-blue-600 my mt-[8rem] font-medium ">Latest Properties</p>
+      <h2 class="text-5xl text-gray-900 mb-[5rem] font-bold">Browse All Offers</h2>
+    </div>
+
+    
+    <div class="grid grid-cols-1 mb-[10rem] sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- Property Card -->
+      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <div class="relative">
+          <div class="bg-gray-300 h-72 flex items-center justify-center">
+            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+          </div>
+          <button class="absolute top-2 left-2 bg-white rounded-full p-2 shadow-md">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+            </svg>
+          </button>
+          <div class="absolute bottom-2 right-2 flex space-x-2">
+            <span class="bg-gray-800 text-white text-xs px-2 py-1 rounded">For Sale</span>
+          </div>
+        </div>
+        <div class="p-4">
+          <h3 class="text-lg font-bold mb-1">Interior Apartment</h3>
+          <p class="text-gray-500 text-sm">80 Brooklyn Street, New York, USA</p>
+
+          <div class="flex items-center justify-between">
+
+            <p class="text-blue-600 text-xl font-bold mt-2">$86,760.00</p>
+            <div class="flex items-center gap-2">
+              <button class="relative group">
+                <img class="w-8" src="{% static 'images/carts.png' %}" alt="carts">
+                <span class="absolute left-1/2 transform -translate-x-1/2 bottom-full mb-2 w-max px-2 py-1 text-sm text-white bg-blue-700 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                  Add to Cart
+                </span>
+              </button>
+              <button class="relative group">
+                <img class="w-8" src="{% static 'images/chat.png' %}" alt="chat">
+                <span class="absolute left-1/2 transform -translate-x-1/2 bottom-full ml-[-1.2rem] mb-2 w-max px-2 py-1 text-sm text-white bg-sky-700 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                  Open Chat
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between text-gray-500 text-sm mt-4">
+            <span class="flex items-center">
+              <img class="h-5 w-5 mr-1" src="{% static 'images/bed.png' %}" alt="">
+              4 Beds
+            </span>
+            <span class="flex items-center">
+              <img class="h-5 w-5 mr-1" src="{% static 'images/bath.png' %}" alt="">
+              2 Baths
+            </span>
+            <span class="flex items-center">
+              <img class="h-5 w-5 mr-1" src="{% static 'images/map.png' %}" alt="">
+              500 sqft
+            </span>
+          </div>
+        </div>
+      </div>
+
+     <!-- Property Card -->
+     <div class="bg-white shadow-md rounded-lg overflow-hidden">
+      <div class="relative">
+        <div class="bg-gray-300 h-72 flex items-center justify-center">
+          <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/358636/pexels-photo-358636.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+        </div>
+        <button class="absolute top-2 left-2 bg-white rounded-full p-2 shadow-md">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+          </svg>
+        </button>
+        <div class="absolute bottom-2 right-2 flex space-x-2">
+          <span class="bg-gray-800 text-white text-xs px-2 py-1 rounded">For Sale</span>
+        </div>
+      </div>
+      <div class="p-4">
+        <h3 class="text-lg font-bold mb-1">Interior Apartment</h3>
+        <p class="text-gray-500 text-sm">80 Brooklyn Street, New York, USA</p>
+       
+        <div class="flex items-center justify-between">
+
+          <p class="text-blue-600 text-xl font-bold mt-2">$86,760.00</p>
+          <div class="flex items-center gap-2">
+            <button class="relative group">
+              <img class="w-8" src="{% static 'images/carts.png' %}" alt="carts">
+              <span class="absolute left-1/2 transform -translate-x-1/2 bottom-full mb-2 w-max px-2 py-1 text-sm text-white bg-blue-700 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                Add to Cart
+              </span>
+            </button>
+            <button class="relative group">
+              <img class="w-8" src="{% static 'images/chat.png' %}" alt="chat">
+              <span class="absolute left-1/2 transform -translate-x-1/2 bottom-full ml-[-1.2rem] mb-2 w-max px-2 py-1 text-sm text-white bg-sky-700 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                Open Chat
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="flex items-center justify-between text-gray-500 text-sm mt-4">
+          <span class="flex items-center">
+            <img class="h-5 w-5 mr-1" src="{% static 'images/bed.png' %}" alt="">
+            4 Beds
+          </span>
+          <span class="flex items-center">
+            <img class="h-5 w-5 mr-1" src="{% static 'images/bath.png' %}" alt="">
+            2 Baths
+          </span>
+          <span class="flex items-center">
+            <img class="h-5 w-5 mr-1" src="{% static 'images/map.png' %}" alt="">
+            500 sqft
+          </span>
+        </div>
+      </div>
+    </div>
+
+
+         <!-- Property Card -->
+         <div class="bg-white shadow-md rounded-lg overflow-hidden">
+          <div class="relative">
+            <div class="bg-gray-300 h-72 flex items-center justify-center">
+              <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+            </div>
+            <button class="absolute top-2 left-2 bg-white rounded-full p-2 shadow-md">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+              </svg>
+            </button>
+            <div class="absolute bottom-2 right-2 flex space-x-2">
+              <span class="bg-gray-800 text-white text-xs px-2 py-1 rounded">For Sale</span>
+            </div>
+          </div>
+          <div class="p-4">
+            <h3 class="text-lg font-bold mb-1">Interior Apartment</h3>
+            <p class="text-gray-500 text-sm">80 Brooklyn Street, New York, USA</p>
+            
+          <div class="flex items-center justify-between">
+
+            <p class="text-blue-600 text-xl font-bold mt-2">$86,760.00</p>
+            <div class="flex items-center gap-2">
+              <button class="relative group">
+                <img class="w-8" src="{% static 'images/carts.png' %}" alt="carts">
+                <span class="absolute left-1/2 transform -translate-x-1/2 bottom-full mb-2 w-max px-2 py-1 text-sm text-white bg-blue-700 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                  Add to Cart
+                </span>
+              </button>
+              <button class="relative group">
+                <img class="w-8" src="{% static 'images/chat.png' %}" alt="chat">
+                <span class="absolute left-1/2 transform -translate-x-1/2 bottom-full ml-[-1.2rem] mb-2 w-max px-2 py-1 text-sm text-white bg-sky-700 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                  Open Chat
+                </span>
+              </button>
+            </div>
+          </div>
+            <div class="flex items-center justify-between text-gray-500 text-sm mt-4">
+              <span class="flex items-center">
+                <img class="h-5 w-5 mr-1" src="{% static 'images/bed.png' %}" alt="">
+                4 Beds
+              </span>
+              <span class="flex items-center">
+                <img class="h-5 w-5 mr-1" src="{% static 'images/bath.png' %}" alt="">
+                2 Baths
+              </span>
+              <span class="flex items-center">
+                <img class="h-5 w-5 mr-1" src="{% static 'images/map.png' %}" alt="">
+                500 sqft
+              </span>
+            </div>
+          </div>
+        </div>
+
+
+             <!-- Property Card -->
+      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <div class="relative">
+          <div class="bg-gray-300 h-72 flex items-center justify-center">
+            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+          </div>
+          <button class="absolute top-2 left-2 bg-white rounded-full p-2 shadow-md">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+            </svg>
+          </button>
+          <div class="absolute bottom-2 right-2 flex space-x-2">
+            <span class="bg-gray-800 text-white text-xs px-2 py-1 rounded">For Sale</span>
+          </div>
+        </div>
+        <div class="p-4">
+          <h3 class="text-lg font-bold mb-1">Interior Apartment</h3>
+          <p class="text-gray-500 text-sm">80 Brooklyn Street, New York, USA</p>
+          
+          <div class="flex items-center justify-between">
+
+            <p class="text-blue-600 text-xl font-bold mt-2">$86,760.00</p>
+            <div class="flex items-center gap-2">
+              <button class="relative group">
+                <img class="w-8" src="{% static 'images/carts.png' %}" alt="carts">
+                <span class="absolute left-1/2 transform -translate-x-1/2 bottom-full mb-2 w-max px-2 py-1 text-sm text-white bg-blue-700 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                  Add to Cart
+                </span>
+              </button>
+              <button class="relative group">
+                <img class="w-8" src="{% static 'images/chat.png' %}" alt="chat">
+                <span class="absolute left-1/2 transform -translate-x-1/2 bottom-full ml-[-1.2rem] mb-2 w-max px-2 py-1 text-sm text-white bg-sky-700 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                  Open Chat
+                </span>
+              </button>
+            </div>
+          </div>
+          <div class="flex items-center justify-between text-gray-500 text-sm mt-4">
+            <span class="flex items-center">
+              <img class="h-5 w-5 mr-1" src="{% static 'images/bed.png' %}" alt="">
+              4 Beds
+            </span>
+            <span class="flex items-center">
+              <img class="h-5 w-5 mr-1" src="{% static 'images/bath.png' %}" alt="">
+              2 Baths
+            </span>
+            <span class="flex items-center">
+              <img class="h-5 w-5 mr-1" src="{% static 'images/map.png' %}" alt="">
+              500 sqft
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  
+
+
+{% endblock %}

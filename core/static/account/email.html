@@ -1,0 +1,44 @@
+{% extends "pages/index.html" %}
+
+{% block title %}Manage Emails{% endblock %}
+
+{% block content %}
+<div class="max-w-lg mx-auto mb-10 pt-20">
+    <!-- Manage Emails Form Card -->
+    <div class="flex flex-col items-center gap-4 p-8 bg-gradient-to-b from-gray-800 to-gray-900 rounded-xl shadow-lg text-white">
+        
+        <h1 class="text-3xl font-semibold mb-4">Manage Your Emails</h1>
+        
+        <!-- Add Email Form -->
+        <form method="POST" class="w-full flex flex-col gap-6 text-left">
+            {% csrf_token %}
+            
+            <!-- Email Input -->
+            <div class="flex flex-col gap-2">
+                <label for="email" class="text-lg font-medium">Add Email</label>
+                {{ form.email }}
+            </div>
+            
+            <!-- Add Email Button -->
+            <button type="submit" class="w-full bg-blue-600 text-white px-3 py-2 rounded-md shadow-md hover:bg-blue-700 transition">
+                Add Email
+            </button>
+        </form>
+
+        <!-- Existing Emails List -->
+        <ul class="mt-6 w-full space-y-4">
+            {% for email in email_addresses %}
+                <li class="flex items-center justify-between bg-gray-700 rounded-md p-3">
+                    <span>{{ email.email }}</span>
+                    <div class="flex gap-3">
+                        {% if not email.verified %}
+                            <a href="{% url 'account_email_verification_sent' %}" class="text-blue-400 hover:text-blue-500">Verify</a>
+                        {% endif %}
+                        <a href="{% url 'account_email_remove' email.pk %}" class="text-red-400 hover:text-red-500">Remove</a>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

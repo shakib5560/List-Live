@@ -1,0 +1,13 @@
+Subject: Confirm Your Email Address
+
+Hi {{ user.username }},
+{% csrf_token %}
+
+Thank you for signing up! Please confirm your email address by clicking the link below:
+
+{{ activate_url }}
+
+If you did not create this account, you can ignore this email.
+
+Thanks,
+The {{ site_name }} Team

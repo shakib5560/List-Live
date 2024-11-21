@@ -1,0 +1,74 @@
+{% extends "template.html" %}
+{% load static %}
+{% block title %} LIST & LIVE - Login {% endblock %}
+
+
+{% block content %}
+
+<section class="bg-gray-50">
+    <div class="flex items-center justify-center min-h-screen">
+      <div class="bg-white p-10 mt-[4rem] rounded-2xl shadow-lg w-full max-w-md">
+        <div class="text-center">
+          <h1 class="text-3xl font-extrabold text-gray-800 mb-4">Welcome Back!</h1>
+          <p class="text-gray-500">Please log in to continue</p>
+        </div>
+        
+        <form method="post" class="mt-8 space-y-6">
+          {% csrf_token %}
+          {% if form.non_field_errors %}
+            <div class="bg-red-50 border-l-4 border-red-400 p-4 text-sm text-red-600 rounded-lg">
+              {{ form.non_field_errors }}
+            </div>
+          {% endif %}
+          
+          <div class="space-y-4">
+            <div>
+              <label for="{{ form.login.id_for_label }}" class="block text-sm font-medium text-gray-700">Email</label>
+              <input 
+                type="email" 
+                id="{{ form.login.id_for_label }}" 
+                name="{{ form.login.html_name }}" 
+                value="{{ form.login.value }}" 
+                class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                placeholder="you@example.com"
+                required>
+            </div>
+            
+            <div>
+              <label for="{{ form.password.id_for_label }}" class="block text-sm font-medium text-gray-700">Password</label>
+              <input 
+                type="password" 
+                id="{{ form.password.id_for_label }}" 
+                name="{{ form.password.html_name }}" 
+                class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                placeholder="••••••••"
+                required>
+            </div>
+          </div>
+          
+          <div class="flex items-center justify-between mt-4">
+            <div class="flex items-center">
+              <input type="checkbox" id="remember" name="remember" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
+              <label for="remember" class="ml-2 block text-sm text-gray-800">Remember me</label>
+            </div>
+            <div>
+              <a href="{% url 'account_reset_password' %}" class="text-sm font-medium text-indigo-600 hover:underline">Forgot password?</a>
+            </div>
+          </div>
+          
+          <div class="mt-6">
+            <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+              Log In
+            </button>
+          </div>
+        </form>
+        
+        <p class="text-center text-sm text-gray-500 mt-6">
+          Don’t have an account? 
+          <a href="{% url 'account_signup' %}" class="text-indigo-600 font-medium hover:underline">Sign up</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends "pages/index.html" %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+
+<div class="max-w-lg mx-auto mb-10 pt-20">
+    <!-- Signup Form Card -->
+    <div class="flex flex-col items-center gap-4 p-6 bg-gradient-to-b from-gray-800 to-gray-900 rounded-xl shadow-lg text-white mt-10">
+        
+        <h1 class="text-3xl font-semibold mb-4">Sign Up</h1>
+        
+        <!-- Form -->
+        <form method="post" class="w-full flex flex-col gap-4 text-left">
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            
+            <!-- Email Field -->
+            <div class="flex flex-col gap-2">
+                {{ form.email.label_tag }}
+                {{ form.email }}
+                {{ form.email.errors }}
+            </div>
+            
+            <!-- Username Field -->
+            <div class="flex flex-col gap-2">
+                {{ form.username.label_tag }}
+                {{ form.username }}
+                {{ form.username.errors }}
+            </div>
+            
+            <!-- Password1 Field -->
+            <div class="flex flex-col gap-2">
+                {{ form.password1.label_tag }}
+                {{ form.password1 }}
+                {{ form.password1.errors }}
+            </div>
+            
+            <!-- Password2 Field -->
+            <div class="flex flex-col gap-2">
+                {{ form.password2.label_tag }}
+                {{ form.password2 }}
+                {{ form.password2.errors }}
+            </div>
+            
+            <!-- Submit Button -->
+            <button type="submit" class="w-full bg-blue-600 text-white px-3 py-2 rounded-md shadow-md hover:bg-blue-700 transition">
+                Sign Up
+            </button>
+        </form>
+        
+        <!-- Already have an account Link -->
+        <div class="text-gray-300 text-sm mt-2">
+            Already have an account? <a href="{% url 'account_login' %}" class="hover:underline">Log In</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
